@@ -50,6 +50,7 @@
     behaviors {
         hmr: homerow_mods_right{
                 compatible = "zmk,behavior-hold-tap";
+               #binding-cells = <2>;
                 flavor = "balanced";
                 tapping-term-ms = <280>;
                 quick-tap-ms = <175>;
@@ -60,6 +61,7 @@
         };
         hml: homerow_mods_left{
                 compatible = "zmk,behavior-hold-tap";
+                #binding-cells = <2>;
                 flavor = "balanced";
                 tapping-term-ms = <280>;
                 quick-tap-ms = <175>;
@@ -84,19 +86,19 @@
         //    };
     };
 
-    macros {
-        gif: gif {
-            label = "giphy";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LSHFT>
-                , <&macro_tap &kp N2>
-                , <&macro_release &kp LSHFT>
-                , <&macro_tap &kp G &kp I &kp F>
-                ;
-        };
-    };
+//////    macros {
+//////        gif: gif {
+//////            label = "giphy";
+//////            compatible = "zmk,behavior-macro";
+//////            #binding-cells = <0>;
+//////            bindings
+//////                = <&macro_press &kp LSHFT>
+//////                , <&macro_tap &kp N2>
+//////                , <&macro_release &kp LSHFT>
+//////                , <&macro_tap &kp G &kp I &kp F>
+//////                ;
+//////        };
+//////    };
 
 
         keymap {
